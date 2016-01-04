@@ -4,3 +4,4 @@
 - src: stevenharradine.hostname
 - src: stevenharradine.openvpn
 - src: stevenharradine.transmission
+- src: stevenharradine.nfs
