@@ -16,3 +16,7 @@
       openvpn_client: yes
     - role: stevenharradine.transmission
       transmission_rpc_whitelist: "*"
+    - role: stevenharradine.nfs
+      nfs_client: yes
+      nfs_client_source: 192.168.1.21:/mnt/Torrents/pritor
+      nfs_client_mount_point: /var/lib/transmission-daemon/downloads
