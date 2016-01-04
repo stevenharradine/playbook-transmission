@@ -1,0 +1,17 @@
+---
+- connection: local
+  hosts: localhost
+  sudo: true
+  remote_user: douglas
+  vars_files:
+    - vault.yml
+  vars:
+    project: transmission
+  roles:
+    - role: stevenharradine.pseudo-forge
+    - role: stevenharradine.static-ip
+      static_ip_address: "192.168.1.{% if environment_tier=='development' %}94{% elif environment_tier=='production' %}4{% endif %}"
+    - role: stevenharradine.hostname
+    - role: stevenharradine.openvpn
+      openvpn_client: yes
+    - role: stevenharradine.transmission
