@@ -10,7 +10,7 @@
   roles:
     - role: stevenharradine.pseudo-forge
     - role: stevenharradine.static-ip
-      static_ip_address: "192.168.1.{% if environment_tier=='development' %}94{% elif environment_tier=='production' %}4{% endif %}"
+      static_ip_address: "192.168.2.{% if environment_tier=='development' %}94{% elif environment_tier=='production' %}4{% endif %}"
     - role: stevenharradine.hostname
     - role: stevenharradine.openvpn
       openvpn_client: yes
@@ -18,5 +18,5 @@
       transmission_rpc_whitelist: "*"
     - role: stevenharradine.nfs
       nfs_client: yes
-      nfs_client_source: 192.168.1.21:/mnt/Torrents/pritor
+      nfs_client_source: 192.168.2.21:/mnt/Torrents/pritor
       nfs_client_mount_point: /var/lib/transmission-daemon/downloads
